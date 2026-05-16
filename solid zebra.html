@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOLID ZEBRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#FFFFFF;
+  color:Black;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  background:#FFFFFF;
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.logo span{
+  color:#999;
+}
+
+.nav-links{
+  display:flex;
+  gap:35px;
+}
+
+.nav-links a{
+  font-size:14px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#999;
+}
+
+/* HERO */
+
+ .hero{
+  height:100vh;
+  background:
+   linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+  url("https://raw.githubusercontent.com/spyDiv/Solid-Zebra/main/zerbra%20with%20glasses.png") center/cover no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero-content h1{
+  font-size:78px;
+  line-height:1;
+  margin-bottom:25px;
+  font-weight:900;
+}
+
+.hero-content p{
+  font-size:18px;
+  color:#cfcfcf;
+  line-height:1.8;
+  max-width:550px;
+  margin-bottom:40px;
+}
+
+.btn{
+  display:inline-block;
+  padding:16px 35px;
+  border:1px solid white;
+  transition:0.3s;
+  font-weight:600;
+}
+
+.btn:hover{
+  background:white;
+  color:black;
+}
+
+/* FEATURE STRIP */
+
+.strip{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+}
+
+.strip div{
+  padding:25px;
+  color:#999;
+  font-size:14px;
+}
+
+/* SECTION */
+
+section{
+  padding:100px 8%;
+}
+
+.section-title{
+  font-size:42px;
+  margin-bottom:50px;
+  font-weight:800;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.product{
+  background:#151515;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.product:hover{
+  transform:translateY(-10px);
+}
+
+.product img{
+  height:420px;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:25px;
+}
+
+.product-info h3{
+  margin-bottom:10px;
+  font-size:20px;
+}
+
+.price{
+  color:#aaa;
+  margin-bottom:20px;
+}
+
+.buy{
+  display:inline-block;
+  padding:12px 20px;
+  border:1px solid #444;
+  transition:0.3s;
+}
+
+.buy:hover{
+  background:white;
+  color:black;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-text h2{
+  font-size:50px;
+  margin-bottom:30px;
+}
+
+.about-text p{
+  line-height:2;
+  color:#bbb;
+}
+
+.about img{
+  border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:60px 8%;
+  border-top:1px solid #222;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.footer-top h2{
+  font-size:32px;
+}
+
+.footer-top p{
+  color:#888;
+}
+
+.socials{
+  display:flex;
+  gap:20px;
+}
+
+.socials a{
+  color:#aaa;
+}
+
+.socials a:hover{
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-content h1{
+    font-size:52px;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .strip{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+SOLID <span>ZEBRA</span>
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Collections</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+MINIMAL.<br>
+UNTAMED.
+</h1>
+
+<p>
+Modern monochrome streetwear built around clean silhouettes,
+premium comfort, and bold identity.
+</p>
+
+<a href="#" class="btn">SHOP COLLECTION</a>
+
+</div>
+
+</section>
+
+<!-- STRIP -->
+
+<div class="strip">
+<div>PREMIUM FABRIC</div>
+<div>MODERN STREETWEAR</div>
+<div>BUILT IN CONTRAST</div>
+</div>
+
+<!-- PRODUCTS -->
+
+<section>
+
+<h2 class="section-title">
+FEATURED DROPS
+</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Oversized Mono Tee</h3>
+<p class="price">₹999</p>
+<a href="#" class="buy">ADD TO CART</a>
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Shadow Hoodie</h3>
+<p class="price">₹1,899</p>
+<a href="#" class="buy">ADD TO CART</a>
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Zebra Line Joggers</h3>
+<p class="price">₹1,499</p>
+<a href="#" class="buy">ADD TO CART</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+<div class="about">
+
+<div class="about-text">
+
+<h2>WEAR THE CONTRAST.</h2>
+
+<p>
+SOLID ZEBRA blends minimal design with bold identity.
+Built for people who want clean everyday fashion without losing edge or individuality.
+Every piece is designed around movement, simplicity, and monochrome expression.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-top">
+
+<div>
+<h2>SOLID ZEBRA</h2>
+<p>Modern monochrome streetwear.</p>
+</div>
+
+<div class="socials">
+<a href="#">Instagram</a>
+<a href="#">Pinterest</a>
+<a href="#">YouTube</a>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
